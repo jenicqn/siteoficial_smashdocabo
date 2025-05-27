@@ -14,6 +14,26 @@
       background: #fff;
       color: #222;
     }
+    .hero-logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 38px 0 16px 0;
+      background: #fff;
+    }
+    .hero-logo img {
+      width: 210px;
+      max-width: 90vw;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 6px 22px #f9731630);
+      transition: width .18s;
+    }
+    @media (max-width: 600px) {
+      .hero-logo { padding: 22px 0 8px 0;}
+      .hero-logo img { width: 140px;}
+    }
     header {
       background: #f97316;
       color: #fff;
@@ -21,7 +41,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 28px;
-      height: 95px;
+      height: 78px;
       box-shadow: 0 2px 8px rgba(0,0,0,.07);
     }
     .nav-social {
@@ -71,31 +91,15 @@
       background: #fff;
       color: #f97316;
     }
-    .logo-header {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      min-width: 200px;
-    }
-    .logo-header img {
-      height: 90px;
-      max-width: 210px;
-      margin-left: 16px;
-      margin-right: 0;
-      transition: height .18s, max-width .18s;
-    }
     @media (max-width: 1100px) {
       .nav-social { gap: 24px; }
-      .logo-header img { height: 76px; max-width: 170px; }
     }
     @media (max-width: 900px) {
       header { flex-direction: column; height: auto; padding: 13px 5px 5px 5px; }
       .nav-social { flex-direction: column; gap: 9px; width: 100%; }
-      .logo-header { width: 100%; justify-content: center; margin-top: 8px;}
     }
     @media (max-width: 650px) {
       .nav-links { gap: 10px;}
-      .logo-header img { height: 56px; max-width: 130px;}
       .social-icons a { width: 34px; height: 34px; font-size: 1.3rem;}
     }
     /* HERO IGUAL AO ANTERIOR */
@@ -139,7 +143,7 @@
     .main-hero-content h1 {
       font-size: 2.4rem;
       color: #f97316;
-      margin: 0;
+      margin: 0 0 10px 0;
       line-height: 1.1;
     }
     .main-hero-content p {
@@ -176,6 +180,12 @@
   </style>
 </head>
 <body>
+  <!-- LOGO GRANDE CENTRALIZADO -->
+  <div class="hero-logo">
+    <img src="logo.png" alt="Logo Smash do Cabo">
+  </div>
+
+  <!-- MENU/HEADER ABAIXO -->
   <header>
     <div class="nav-social">
       <nav class="nav-links">
@@ -189,9 +199,6 @@
         <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
         <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
       </div>
-    </div>
-    <div class="logo-header">
-      <img src="logo.png" alt="Logo Smash do Cabo">
     </div>
   </header>
 
