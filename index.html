@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smash do Cabo – O Melhor Smash de Arraial do Cabo</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <!-- Ícones (usando CDN Remixicon) -->
+  <!-- Ícones Remixicon CDN -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     body {
@@ -21,28 +21,27 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 28px;
-      height: 78px;
+      height: 95px;
       box-shadow: 0 2px 8px rgba(0,0,0,.07);
     }
-    .logo-header {
+    .nav-social {
       display: flex;
       align-items: center;
-    }
-    .logo-header img {
-      height: 54px;
-      margin-right: 12px;
+      gap: 42px;
+      flex: 1;
+      justify-content: center;
     }
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 32px;
     }
     .nav-links a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.07rem;
+      font-size: 1.15rem;
       font-weight: 700;
       letter-spacing: .5px;
-      padding: 10px 8px;
+      padding: 10px 12px;
       border-radius: 8px;
       transition: background .18s;
     }
@@ -53,17 +52,17 @@
     .social-icons {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
     .social-icons a {
       color: #fff;
-      font-size: 1.54rem;
+      font-size: 1.74rem;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      width: 37px;
-      height: 37px;
+      width: 44px;
+      height: 44px;
       background: rgba(255,255,255,0.06);
       transition: background .18s, color .18s;
       text-decoration: none;
@@ -72,17 +71,34 @@
       background: #fff;
       color: #f97316;
     }
-    @media (max-width: 960px) {
-      header { flex-wrap: wrap; height: auto; padding: 14px 10px; }
-      .nav-links { gap: 14px; }
-      .logo-header img { height: 44px; }
+    .logo-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-width: 200px;
     }
-    @media (max-width: 700px) {
-      header { flex-direction: column; align-items: flex-start; }
-      .logo-header { margin-bottom: 10px; }
-      .nav-links { margin-bottom: 6px; }
-      .social-icons { align-self: flex-end; }
+    .logo-header img {
+      height: 90px;
+      max-width: 210px;
+      margin-left: 16px;
+      margin-right: 0;
+      transition: height .18s, max-width .18s;
     }
+    @media (max-width: 1100px) {
+      .nav-social { gap: 24px; }
+      .logo-header img { height: 76px; max-width: 170px; }
+    }
+    @media (max-width: 900px) {
+      header { flex-direction: column; height: auto; padding: 13px 5px 5px 5px; }
+      .nav-social { flex-direction: column; gap: 9px; width: 100%; }
+      .logo-header { width: 100%; justify-content: center; margin-top: 8px;}
+    }
+    @media (max-width: 650px) {
+      .nav-links { gap: 10px;}
+      .logo-header img { height: 56px; max-width: 130px;}
+      .social-icons a { width: 34px; height: 34px; font-size: 1.3rem;}
+    }
+    /* HERO IGUAL AO ANTERIOR */
     .main-hero {
       max-width: 1100px;
       margin: 60px auto 0 auto;
@@ -161,16 +177,38 @@
 </head>
 <body>
   <header>
+    <div class="nav-social">
+      <nav class="nav-links">
+        <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" target="_blank">Cardápio</a>
+        <a href="https://www.google.com/maps/dir//smash+do+cabo/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x971937fb8168b7:0x1ccbbe38ab486f63?sa=X&ved=1t:3061&ictx=111" target="_blank">Localização</a>
+        <a href="https://wa.me/5522991052197" target="_blank">Contato</a>
+      </nav>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="ri-facebook-fill"></i></a>
+        <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+        <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
+      </div>
+    </div>
     <div class="logo-header">
       <img src="logo.png" alt="Logo Smash do Cabo">
     </div>
-    <nav class="nav-links">
-      <a href="#cardapio">Cardápio</a>
-      <a href="https://www.google.com/maps/dir//smash+do+cabo/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x971937fb8168b7:0x1ccbbe38ab486f63?sa=X&ved=1t:3061&ictx=111" target="_blank">Localização</a>
-      <a href="https://wa.me/5522991052197" target="_blank">Contato</a>
-    </nav>
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="ri-facebook-fill"></i></a>
-      <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
-      <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
-      <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor
+  </header>
+
+  <section class="main-hero">
+    <div class="main-hero-img">
+      <img src="fotodosite.jpg" alt="Smash Burger">
+    </div>
+    <div class="main-hero-content">
+      <h1>O melhor Smash você encontra aqui!</h1>
+      <p>
+        Descubra o verdadeiro sabor do Smash Burger em Arraial do Cabo.<br>
+        Ingredientes frescos, carnes suculentas, muito sabor e aquele ponto perfeito.<br>
+        Peça agora e viva essa experiência!
+      </p>
+      <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" class="btn-cardapio" target="_blank">Peça já</a>
+    </div>
+  </section>
+
+</body>
+</html>
