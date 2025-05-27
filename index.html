@@ -12,6 +12,8 @@
       font-family: 'Montserrat', Arial, sans-serif;
       background: #fff;
       color: #222;
+      /* transições globais suaves */
+      transition: background .23s, color .18s;
     }
     header {
       background: #f97316;
@@ -19,321 +21,404 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 42px;
-      height: 120px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      padding: 0 56px 0 0;
+      height: 130px;
+      box-shadow: 0 4px 22px #f9731630, 0 2px 8px rgba(0,0,0,.08);
+      position: relative;
+      z-index: 10;
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
     }
     .logo-header {
       display: flex;
       align-items: center;
       height: 100%;
+      margin-left: 34px;
     }
     .logo-header img {
-      height: 108px;
+      height: 112px;
       max-width: 280px;
-      margin-right: 30px;
+      margin-right: 18px;
       display: block;
       background: none;
       border-radius: 0;
       padding: 0;
       box-shadow: none;
+      filter: drop-shadow(0 0 14px #fff7e8) drop-shadow(0 1px 2px #f9731633);
+      transition: filter .18s;
+    }
+    .logo-header img:hover {
+      filter: drop-shadow(0 0 24px #fffbe1) drop-shadow(0 1px 4px #f9731669);
     }
     .nav-social {
       display: flex;
       align-items: center;
-      gap: 46px;
+      gap: 58px;
       flex: 1;
       justify-content: center;
     }
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 42px;
+      font-weight: 700;
     }
     .nav-links a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.22rem;
+      font-size: 1.25rem;
       font-weight: 700;
       letter-spacing: .5px;
-      padding: 10px 14px;
-      border-radius: 8px;
-      transition: background .18s;
+      padding: 12px 18px 8px 18px;
+      border-radius: 8px 8px 0 0;
+      transition: background .18s, color .16s, border .16s;
+      border-bottom: 2.5px solid transparent;
+      position: relative;
     }
-    .nav-links a:hover {
-      background: #fff3e0;
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background: #fff5e0;
       color: #f97316;
+      border-bottom: 2.5px solid #f97316;
+      z-index: 1;
     }
     .social-icons {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 22px;
     }
     .social-icons a {
       color: #fff;
-      font-size: 1.85rem;
+      font-size: 2.11rem;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      background: rgba(255,255,255,0.09);
-      transition: background .18s, color .18s, transform .12s;
+      width: 54px;
+      height: 54px;
+      background: rgba(255,255,255,0.10);
+      transition: background .18s, color .19s, transform .13s;
       text-decoration: none;
       overflow: hidden;
+      position: relative;
+      box-shadow: 0 1px 8px #f9731611;
     }
     .social-icons a:hover {
       background: #fff3e0;
       color: #f97316;
-      transform: scale(1.13) rotate(-7deg);
+      transform: scale(1.11) rotate(-6deg);
     }
-    /* Tagline */
+    .social-icons a[title="WhatsApp"]:hover { color: #25D366; }
+    .social-icons a[title="Instagram"]:hover { color: #C13584; }
+    .social-icons a[title="iFood"]:hover { color: #EA1D2C; }
+    .social-icons a[title="Facebook"]:hover { color: #1877F3; }
+    /* Tagline com degrade e @ animado */
     .tagline {
-      background: #ffecd1;
+      background: linear-gradient(90deg, #fffbe8 0%, #fff4df 100%);
       color: #f97316;
-      font-size: 1.13rem;
+      font-size: 1.12rem;
       font-weight: 600;
       text-align: center;
-      padding: 9px 0 8px 0;
-      letter-spacing: 1.5px;
-      border-bottom: 1px solid #ffd6a1;
-      box-shadow: 0 2px 12px #f973160d;
+      padding: 13px 0 10px 0;
+      letter-spacing: 1.2px;
+      border-bottom: 1px solid #ffe3b6;
+      box-shadow: 0 2px 12px #f9731607;
+      width: 100%;
+      z-index: 2;
+      position: relative;
+      margin-bottom: 22px;
     }
-    @media (max-width: 1100px) {
-      .logo-header img { height: 78px; max-width: 160px; margin-right: 12px;}
-      header { padding: 0 8px; }
+    .tagline b {
+      color: #f97316;
+      font-weight: 700;
+      font-family: inherit;
+      animation: blinkcolor 2.1s infinite alternate;
+      letter-spacing: 1.5px;
+      padding-left: 4px;
+    }
+    @keyframes blinkcolor {
+      from { color: #f97316;}
+      to { color: #C13584;}
+    }
+    @media (max-width: 1200px) {
       .nav-social { gap: 14px; }
-      .tagline { font-size: 1rem; }
+      header { padding: 0 12px 0 0;}
     }
     @media (max-width: 900px) {
       header { flex-direction: column; height: auto; padding: 10px 5px 5px 5px;}
-      .logo-header { width: 100%; justify-content: center; margin-bottom: 6px;}
-      .nav-social { flex-direction: column; gap: 10px; width: 100%; justify-content: center;}
+      .logo-header { width: 100%; justify-content: center; margin-bottom: 8px;}
+      .nav-social { flex-direction: column; gap: 12px; width: 100%; justify-content: center;}
       .social-icons { align-self: center; }
+      .nav-links { gap: 16px;}
+      .logo-header img { height: 62px; max-width: 100px;}
+      .logo-header { margin-left: 2px;}
     }
     @media (max-width: 650px) {
-      .nav-links { gap: 10px;}
-      .logo-header img { height: 48px; max-width: 78px;}
+      .nav-links { gap: 9px;}
+      .logo-header img { height: 38px; max-width: 72px;}
       .social-icons a { width: 30px; height: 30px; font-size: 1.2rem;}
-      .tagline { font-size: 0.98rem; }
+      .tagline { font-size: 0.96rem; }
+      header { padding: 0 2px 0 0; }
+      .logo-header { margin-left: 0;}
     }
+    /* HERO com degrade, separação visual elegante */
     .main-hero {
-      max-width: 1100px;
-      margin: 60px auto 0 auto;
+      max-width: 1120px;
+      margin: 75px auto 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 55px;
-      padding: 0 16px;
+      gap: 75px;
+      padding: 0 18px;
       flex-wrap: wrap;
+      position: relative;
     }
     .main-hero-img {
-      flex: 1 1 310px;
-      max-width: 410px;
+      flex: 1 1 320px;
+      max-width: 420px;
       min-width: 230px;
-      border-radius: 30px;
-      box-shadow: 0 8px 36px #f973161a, 0 2px 12px #f973163a;
-      background: #fff3e0;
+      border-radius: 32px;
+      box-shadow: 0 10px 38px #f973161a, 0 3px 16px #f973163a;
+      background: linear-gradient(140deg, #fffbe8 60%, #ffe3b6 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 240px;
+      min-height: 260px;
+      z-index: 1;
+      position: relative;
     }
     .main-hero-img img {
       width: 100%;
-      max-width: 370px;
-      border-radius: 28px;
+      max-width: 388px;
+      border-radius: 30px;
       display: block;
+      box-shadow: 0 8px 20px #f9731622;
     }
     .main-hero-content {
-      flex: 1 1 350px;
+      flex: 1 1 400px;
       min-width: 260px;
-      max-width: 500px;
+      max-width: 560px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 23px;
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.91);
+      border-radius: 30px;
+      padding: 16px 24px 16px 24px;
+      box-shadow: 0 6px 26px #f9731621;
     }
     .main-hero-content h1 {
-      font-size: 2.4rem;
+      font-size: 2.55rem;
       color: #f97316;
       margin: 0 0 10px 0;
       line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
     .main-hero-content p {
-      font-size: 1.21rem;
+      font-size: 1.18rem;
       color: #222;
       margin: 0 0 14px 0;
       line-height: 1.5;
+      font-weight: 500;
     }
-    /* Botão com animação de pulso */
-    .btn-cardapio {
-      display: inline-block;
-      background: #f97316;
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.11rem;
-      padding: 12px 34px;
-      border-radius: 18px;
-      text-decoration: none;
-      margin-top: 4px;
-      box-shadow: 0 2px 10px #f973163a;
-      border: none;
-      transition: background .2s, color .2s, transform .15s;
-      cursor: pointer;
-      animation: pulse 1.4s infinite alternate;
-    }
-    .btn-cardapio:hover {
-      background: #ff9800;
-      color: #fff;
-      transform: scale(1.045);
-      animation: none;
-    }
-    @keyframes pulse {
-      from { box-shadow: 0 2px 10px #f973163a, 0 0 0 0 #f9731609; }
-      to   { box-shadow: 0 2px 18px #f973166a, 0 0 0 12px #f9731605; }
+    .hero-divider {
+      display: block;
+      width: 12px;
+      min-width: 12px;
+      height: 220px;
+      background: linear-gradient(180deg, #fff6e0 0%, #f9731620 90%);
+      border-radius: 12px;
+      margin: 0 35px 0 18px;
+      box-shadow: 0 2px 10px #f973161a;
+      opacity: .32;
     }
     @media (max-width: 850px) {
-      .main-hero { flex-direction: column; gap: 26px; margin-top: 36px;}
-      .main-hero-content { align-items: center; text-align: center;}
-      .main-hero-content h1 { font-size: 2rem;}
+      .main-hero { flex-direction: column; gap: 32px; margin-top: 40px;}
+      .main-hero-content { align-items: center; text-align: center; padding: 12px;}
+      .hero-divider { display: none;}
     }
     /* Depoimentos */
     .testimonials-section {
-      margin: 62px auto 0 auto;
-      max-width: 900px;
+      margin: 82px auto 0 auto;
+      max-width: 1020px;
       padding: 0 16px;
       text-align: center;
+      border-radius: 22px;
+      background: linear-gradient(110deg, #fffbe8 80%, #ffd6b3 100%);
+      box-shadow: 0 8px 24px #f973160a;
     }
     .testimonials-title {
       color: #f97316;
-      font-size: 2rem;
-      margin-bottom: 24px;
-      font-weight: 700;
+      font-size: 2.13rem;
+      margin-bottom: 34px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
     .testimonials-list {
       display: flex;
-      gap: 26px;
+      gap: 36px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 20px;
     }
     .testimonial {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 2px 16px #f973160e;
-      padding: 24px 30px 18px 30px;
-      max-width: 300px;
-      min-width: 230px;
+      background: rgba(255,255,255,0.81);
+      border-radius: 20px;
+      box-shadow: 0 2px 18px #f973160e;
+      padding: 32px 34px 18px 36px;
+      max-width: 320px;
+      min-width: 220px;
       text-align: left;
-      font-size: 1rem;
+      font-size: 1.08rem;
       position: relative;
-      margin-bottom: 16px;
+      margin-bottom: 26px;
+      overflow: hidden;
+      backdrop-filter: blur(3px);
+    }
+    .testimonial:before {
+      content: "“";
+      position: absolute;
+      left: 18px;
+      top: 12px;
+      font-size: 3.2rem;
+      color: #f9731622;
+      z-index: 0;
+      font-family: serif;
+      pointer-events: none;
+      user-select: none;
     }
     .testimonial-stars {
       color: #FFD600;
-      font-size: 1.13rem;
+      font-size: 1.38rem;
       margin-bottom: 8px;
       letter-spacing: 2px;
+      position: relative;
+      z-index: 1;
     }
     .testimonial-quote {
       font-style: italic;
       color: #333;
-      margin-bottom: 10px;
+      margin-bottom: 13px;
+      position: relative;
+      z-index: 1;
+      font-weight: 500;
     }
     .testimonial-author {
       font-weight: bold;
       color: #f97316;
-      font-size: 1.01rem;
+      font-size: 1.08rem;
       margin-top: 3px;
       letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
     }
-    /* Galeria de fotos simples */
-    .gallery-section {
-      max-width: 900px;
-      margin: 60px auto 0 auto;
-      padding: 0 16px;
-      text-align: center;
+    @media (max-width: 800px) {
+      .testimonials-list { flex-direction: column; gap: 16px;}
+      .testimonial { max-width: 100%; }
     }
-    .gallery-title {
-      color: #f97316;
-      font-size: 1.8rem;
-      margin-bottom: 22px;
-      font-weight: 700;
-    }
-    .gallery-list {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .gallery-list img {
-      width: 180px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 4px 18px #f973161a;
-      border: 2.3px solid #fff3e0;
-      transition: transform .17s;
-      background: #fff3e0;
-    }
-    .gallery-list img:hover {
-      transform: scale(1.055) rotate(-3deg);
-      box-shadow: 0 8px 22px #f9731645;
-      border-color: #ffd7ad;
-    }
-    @media (max-width: 650px) {
-      .gallery-list img { width: 100px; height: 90px; }
-    }
-    /* Footer */
+    /* Footer elegante */
     footer {
-      background: #262626;
+      background: linear-gradient(180deg, #242220 65%, #181716 100%);
       color: #fff;
       text-align: center;
-      padding: 32px 14px 20px 14px;
-      margin-top: 64px;
-      font-size: 1.04rem;
+      padding: 42px 14px 30px 14px;
+      margin-top: 74px;
+      font-size: 1.08rem;
+      border-top-left-radius: 26px;
+      border-top-right-radius: 26px;
+      box-shadow: 0 -4px 30px #1a110740;
+      position: relative;
     }
     .footer-contact {
-      margin: 8px 0;
+      margin: 10px 0 4px 0;
       font-weight: 400;
+      line-height: 1.6;
+      font-size: 1.04rem;
     }
+    .footer-contact a { color: #f97316; text-decoration: none; font-weight: 700;}
+    .footer-contact a:hover { color: #FFD600;}
     .footer-social {
-      margin: 14px 0;
+      margin: 22px 0 10px 0;
     }
     .footer-social a {
       color: #fff;
-      margin: 0 10px;
-      font-size: 1.44rem;
+      margin: 0 16px;
+      font-size: 1.96rem;
       text-decoration: none;
-      transition: color .17s;
+      transition: color .17s, transform .14s;
+      vertical-align: middle;
+      display: inline-block;
+      opacity: 0.86;
     }
-    .footer-social a:hover { color: #f97316; }
+    .footer-social a:hover { color: #f97316; transform: scale(1.12);}
+    .footer-social a[title="WhatsApp"]:hover { color: #25D366; }
+    .footer-social a[title="Instagram"]:hover { color: #C13584; }
+    .footer-social a[title="iFood"]:hover { color: #EA1D2C; }
+    .footer-social a[title="Facebook"]:hover { color: #1877F3; }
     .footer-credit {
       color: #f97316;
-      margin-top: 15px;
-      font-size: 0.95rem;
+      margin-top: 23px;
+      font-size: 1.01rem;
       letter-spacing: 1px;
+      font-weight: 700;
     }
-    /* Mapa */
+    /* Mapa premium */
     .map-section {
       text-align: center;
-      margin-top: 62px;
-      margin-bottom: 24px;
+      margin: 82px auto 0 auto;
+      max-width: 1020px;
+      border-radius: 22px;
+      box-shadow: 0 4px 26px #f9731615;
+      background: linear-gradient(120deg, #fffbe8 78%, #ffd6b3 100%);
+      padding-top: 30px;
+      padding-bottom: 28px;
     }
     .map-title {
       color: #f97316;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 7px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+    }
+    .map-subtitle {
+      color: #f97316;
+      font-size: 1.06rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      opacity: 0.73;
+      letter-spacing: 1.1px;
+    }
+    .btn-maps {
+      display: inline-block;
+      margin-bottom: 16px;
+      background: #f97316;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.03rem;
+      padding: 8px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 2px 7px #f9731640;
+      border: none;
+      transition: background .17s, color .17s, transform .12s;
+      cursor: pointer;
+      margin-top: 2px;
+    }
+    .btn-maps:hover {
+      background: #EA1D2C;
+      color: #fff;
+      transform: scale(1.055);
     }
     .map-responsive {
       overflow: hidden;
-      padding-bottom: 45%;
+      padding-bottom: 43%;
       position: relative;
       height: 0;
-      border-radius: 22px;
-      box-shadow: 0 4px 18px #f973161a;
-      max-width: 750px;
+      border-radius: 26px;
+      box-shadow: 0 6px 22px #f973161a;
+      max-width: 740px;
       margin: 0 auto;
       background: #fff3e0;
     }
@@ -344,96 +429,14 @@
       width: 100%;
       position: absolute;
       border: none;
-      border-radius: 22px;
+      border-radius: 26px;
+      filter: saturate(1.15);
+    }
+    @media (max-width: 850px) {
+      .main-hero { margin-top: 38px; }
+      .map-section { margin: 50px 6px 0 6px; }
+      .testimonials-section { margin: 54px 6px 0 6px; }
+      footer { margin-top: 48px;}
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo-header">
-      <img src="logo.png" alt="Logo Smash do Cabo">
-    </div>
-    <div class="nav-social">
-      <nav class="nav-links">
-        <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" target="_blank">Cardápio</a>
-        <a href="#ondeestamos">Localização</a>
-        <a href="https://wa.me/5522991052197" target="_blank">Contato</a>
-      </nav>
-      <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="ri-facebook-fill"></i></a>
-        <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
-        <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
-        <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
-      </div>
-    </div>
-  </header>
-
-  <div class="tagline">
-    Aberto todos os dias • Delivery & Retirada • Siga <b>@smashdocabooficial</b>
-  </div>
-
-  <section class="main-hero">
-    <div class="main-hero-img">
-      <img src="fotodosite.jpg" alt="Smash Burger">
-    </div>
-    <div class="main-hero-content">
-      <h1>O melhor Smash você encontra aqui!</h1>
-      <p>
-        Descubra o verdadeiro sabor do Smash Burger em Arraial do Cabo.<br>
-        Ingredientes frescos, carnes suculentas, muito sabor e aquele ponto perfeito.<br>
-        Peça agora e viva essa experiência!
-      </p>
-      <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" class="btn-cardapio" target="_blank">Peça já</a>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section class="testimonials-section">
-    <div class="testimonials-title">O que nossos clientes dizem</div>
-    <div class="testimonials-list">
-      <div class="testimonial">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">Melhor smash da cidade! Atendimento rápido, lanche delicioso e preço justo. Recomendo muito!</div>
-        <div class="testimonial-author">— Ana Paula S.</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">O sabor é incrível, o pão é super macio e a carne no ponto certo. Virei fã do Smash do Cabo!</div>
-        <div class="testimonial-author">— Carlos F.</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">Experiência incrível! Já pedi várias vezes, sempre chega quentinho. Melhor hambúrguer de Arraial!</div>
-        <div class="testimonial-author">— Luciana R.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mapa -->
-  <section class="map-section">
-    <div class="map-title">Onde estamos</div>
-    <div class="map-responsive">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.363650166314!2d-42.02462462567985!3d-22.968356879211683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x971937fb8168b7%3A0x1ccbbe38ab486f63!2sSmash%20do%20Cabo!5e0!3m2!1spt-BR!2sbr!4v1716842100059!5m2!1spt-BR!2sbr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-  </section>
-
-  <footer>
-    <div class="footer-contact">
-      Endereço: R. Damião Teixeira, 33 - Praia dos Anjos, Arraial do Cabo - RJ<br>
-      WhatsApp: <a href="https://wa.me/5522991052197" style="color:#f97316;text-decoration:none;" target="_blank">(22) 99105-2197</a>
-      <br>Aberto todos os dias, 18h às 23h
-    </div>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
-      <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
-      <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
-    </div>
-    <div class="footer-credit">
-      © 2020 Smash do Cabo. Todos os direitos reservados.
-    </div>
-  </footer>
-</body>
-</html>
