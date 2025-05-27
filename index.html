@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smash do Cabo – O Melhor Smash de Arraial do Cabo</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <!-- Ícones Remixicon CDN (ainda usado para acessibilidade, mas você usa suas imagens) -->
+  <!-- Ícones Remixicon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -19,8 +20,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 36px;
-      height: 100px;
+      padding: 0 42px;
+      height: 120px;
       box-shadow: 0 2px 8px rgba(0,0,0,.07);
     }
     .logo-header {
@@ -29,19 +30,20 @@
       height: 100%;
     }
     .logo-header img {
-      height: 90px;
-      max-width: 210px;
-      margin-right: 22px;
+      height: 108px;      /* AUMENTA O TAMANHO DA LOGO */
+      max-width: 280px;
+      margin-right: 30px;
       display: block;
-      filter: drop-shadow(0 4px 18px #f9731620);
-      background: #fff;
-      border-radius: 18px;
-      padding: 2px 10px;
+      /* REMOVE FUNDO BRANCO: apenas o logo PNG aparece */
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
     }
     .nav-social {
       display: flex;
       align-items: center;
-      gap: 44px;
+      gap: 46px;
       flex: 1;
       justify-content: center;
     }
@@ -52,10 +54,10 @@
     .nav-links a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.18rem;
+      font-size: 1.22rem;
       font-weight: 700;
       letter-spacing: .5px;
-      padding: 10px 12px;
+      padding: 10px 14px;
       border-radius: 8px;
       transition: background .18s;
     }
@@ -69,6 +71,8 @@
       gap: 14px;
     }
     .social-icons a {
+      color: #fff;
+      font-size: 1.85rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,23 +80,18 @@
       width: 44px;
       height: 44px;
       background: rgba(255,255,255,0.09);
-      transition: background .18s;
+      transition: background .18s, color .18s;
       text-decoration: none;
       overflow: hidden;
     }
     .social-icons a:hover {
       background: #fff3e0;
-    }
-    .icon-img {
-      width: 26px;
-      height: 26px;
-      object-fit: contain;
-      display: block;
+      color: #f97316;
     }
     @media (max-width: 1100px) {
-      .logo-header img { height: 68px; max-width: 150px; }
-      header { padding: 0 12px; }
-      .nav-social { gap: 16px; }
+      .logo-header img { height: 78px; max-width: 160px; margin-right: 12px;}
+      header { padding: 0 8px; }
+      .nav-social { gap: 14px; }
     }
     @media (max-width: 900px) {
       header { flex-direction: column; height: auto; padding: 10px 5px 5px 5px;}
@@ -102,9 +101,8 @@
     }
     @media (max-width: 650px) {
       .nav-links { gap: 10px;}
-      .logo-header img { height: 42px; max-width: 90px;}
-      .social-icons a { width: 34px; height: 34px;}
-      .icon-img { width: 18px; height: 18px;}
+      .logo-header img { height: 48px; max-width: 78px;}
+      .social-icons a { width: 30px; height: 30px; font-size: 1.2rem;}
     }
     .main-hero {
       max-width: 1100px;
@@ -194,19 +192,10 @@
         <a href="https://wa.me/5522991052197" target="_blank">Contato</a>
       </nav>
       <div class="social-icons">
-        <!-- Facebook pode ser adicionado depois, se tiver imagem -->
-        <!-- <a href="https://facebook.com" target="_blank" title="Facebook">
-          <img src="facebook.png" alt="Facebook" class="icon-img">
-        </a> -->
-        <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram">
-          <img src="instagram.png" alt="Instagram" class="icon-img">
-        </a>
-        <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp">
-          <img src="whatsapp.jpg" alt="WhatsApp" class="icon-img">
-        </a>
-        <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood">
-          <img src="ifood.png" alt="iFood" class="icon-img">
-        </a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="ri-facebook-fill"></i></a>
+        <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+        <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
       </div>
     </div>
   </header>
@@ -222,7 +211,7 @@
         Ingredientes frescos, carnes suculentas, muito sabor e aquele ponto perfeito.<br>
         Peça agora e viva essa experiência!
       </p>
-      <a href="https://app.cardapioweb.com/smash_do_cabo" class="btn-cardapio" target="_blank">Peça já</a>
+      <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" class="btn-cardapio" target="_blank">Peça já</a>
     </div>
   </section>
 </body>
