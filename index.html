@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smash do Cabo – O Melhor Smash de Arraial do Cabo</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <!-- Ícones Remixicon CDN -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     body {
@@ -30,11 +29,10 @@
       height: 100%;
     }
     .logo-header img {
-      height: 108px;      /* AUMENTA O TAMANHO DA LOGO */
+      height: 108px;
       max-width: 280px;
       margin-right: 30px;
       display: block;
-      /* REMOVE FUNDO BRANCO: apenas o logo PNG aparece */
       background: none;
       border-radius: 0;
       padding: 0;
@@ -80,18 +78,32 @@
       width: 44px;
       height: 44px;
       background: rgba(255,255,255,0.09);
-      transition: background .18s, color .18s;
+      transition: background .18s, color .18s, transform .12s;
       text-decoration: none;
       overflow: hidden;
     }
     .social-icons a:hover {
       background: #fff3e0;
       color: #f97316;
+      transform: scale(1.13) rotate(-7deg);
+    }
+    /* Tagline */
+    .tagline {
+      background: #ffecd1;
+      color: #f97316;
+      font-size: 1.13rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 9px 0 8px 0;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #ffd6a1;
+      box-shadow: 0 2px 12px #f973160d;
     }
     @media (max-width: 1100px) {
       .logo-header img { height: 78px; max-width: 160px; margin-right: 12px;}
       header { padding: 0 8px; }
       .nav-social { gap: 14px; }
+      .tagline { font-size: 1rem; }
     }
     @media (max-width: 900px) {
       header { flex-direction: column; height: auto; padding: 10px 5px 5px 5px;}
@@ -103,6 +115,7 @@
       .nav-links { gap: 10px;}
       .logo-header img { height: 48px; max-width: 78px;}
       .social-icons a { width: 30px; height: 30px; font-size: 1.2rem;}
+      .tagline { font-size: 0.98rem; }
     }
     .main-hero {
       max-width: 1100px;
@@ -153,6 +166,7 @@
       margin: 0 0 14px 0;
       line-height: 1.5;
     }
+    /* Botão com animação de pulso */
     .btn-cardapio {
       display: inline-block;
       background: #f97316;
@@ -167,16 +181,170 @@
       border: none;
       transition: background .2s, color .2s, transform .15s;
       cursor: pointer;
+      animation: pulse 1.4s infinite alternate;
     }
     .btn-cardapio:hover {
       background: #ff9800;
       color: #fff;
       transform: scale(1.045);
+      animation: none;
+    }
+    @keyframes pulse {
+      from { box-shadow: 0 2px 10px #f973163a, 0 0 0 0 #f9731609; }
+      to   { box-shadow: 0 2px 18px #f973166a, 0 0 0 12px #f9731605; }
     }
     @media (max-width: 850px) {
       .main-hero { flex-direction: column; gap: 26px; margin-top: 36px;}
       .main-hero-content { align-items: center; text-align: center;}
       .main-hero-content h1 { font-size: 2rem;}
+    }
+    /* Depoimentos */
+    .testimonials-section {
+      margin: 62px auto 0 auto;
+      max-width: 900px;
+      padding: 0 16px;
+      text-align: center;
+    }
+    .testimonials-title {
+      color: #f97316;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+    .testimonials-list {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .testimonial {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px #f973160e;
+      padding: 24px 30px 18px 30px;
+      max-width: 300px;
+      min-width: 230px;
+      text-align: left;
+      font-size: 1rem;
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .testimonial-stars {
+      color: #FFD600;
+      font-size: 1.13rem;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .testimonial-quote {
+      font-style: italic;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      color: #f97316;
+      font-size: 1.01rem;
+      margin-top: 3px;
+      letter-spacing: 1px;
+    }
+    /* Galeria de fotos simples */
+    .gallery-section {
+      max-width: 900px;
+      margin: 60px auto 0 auto;
+      padding: 0 16px;
+      text-align: center;
+    }
+    .gallery-title {
+      color: #f97316;
+      font-size: 1.8rem;
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+    .gallery-list {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery-list img {
+      width: 180px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px #f973161a;
+      border: 2.3px solid #fff3e0;
+      transition: transform .17s;
+      background: #fff3e0;
+    }
+    .gallery-list img:hover {
+      transform: scale(1.055) rotate(-3deg);
+      box-shadow: 0 8px 22px #f9731645;
+      border-color: #ffd7ad;
+    }
+    @media (max-width: 650px) {
+      .gallery-list img { width: 100px; height: 90px; }
+    }
+    /* Footer */
+    footer {
+      background: #262626;
+      color: #fff;
+      text-align: center;
+      padding: 32px 14px 20px 14px;
+      margin-top: 64px;
+      font-size: 1.04rem;
+    }
+    .footer-contact {
+      margin: 8px 0;
+      font-weight: 400;
+    }
+    .footer-social {
+      margin: 14px 0;
+    }
+    .footer-social a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.44rem;
+      text-decoration: none;
+      transition: color .17s;
+    }
+    .footer-social a:hover { color: #f97316; }
+    .footer-credit {
+      color: #f97316;
+      margin-top: 15px;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+    /* Mapa */
+    .map-section {
+      text-align: center;
+      margin-top: 62px;
+      margin-bottom: 24px;
+    }
+    .map-title {
+      color: #f97316;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 45%;
+      position: relative;
+      height: 0;
+      border-radius: 22px;
+      box-shadow: 0 4px 18px #f973161a;
+      max-width: 750px;
+      margin: 0 auto;
+      background: #fff3e0;
+    }
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      border: none;
+      border-radius: 22px;
     }
   </style>
 </head>
@@ -200,6 +368,10 @@
     </div>
   </header>
 
+  <div class="tagline">
+    Aberto todos os dias • Delivery & Retirada • Siga <b>@smashdocabooficial</b>
+  </div>
+
   <section class="main-hero">
     <div class="main-hero-img">
       <img src="fotodosite.jpg" alt="Smash Burger">
@@ -214,5 +386,65 @@
       <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" class="btn-cardapio" target="_blank">Peça já</a>
     </div>
   </section>
+
+  <!-- Galeria de Fotos -->
+  <section class="gallery-section">
+    <div class="gallery-title">Conheça nossos lanches</div>
+    <div class="gallery-list">
+      <img src="fotodosite.jpg" alt="Smash Burger">
+      <img src="lanche2.jpg" alt="Smash Artesanal">
+      <img src="lanche3.jpg" alt="Batata Turbinada">
+      <img src="lanche4.jpg" alt="Combo Smash">
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="testimonials-section">
+    <div class="testimonials-title">O que nossos clientes dizem</div>
+    <div class="testimonials-list">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Melhor smash da cidade! Atendimento rápido, lanche delicioso e preço justo. Recomendo muito!</div>
+        <div class="testimonial-author">— Ana Paula S.</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">O sabor é incrível, o pão é super macio e a carne no ponto certo. Virei fã do Smash do Cabo!</div>
+        <div class="testimonial-author">— Carlos F.</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Experiência incrível! Já pedi várias vezes, sempre chega quentinho. Melhor hambúrguer de Arraial!</div>
+        <div class="testimonial-author">— Luciana R.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="map-section">
+    <div class="map-title">Onde estamos</div>
+    <div class="map-responsive">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.363650166314!2d-42.02462462567985!3d-22.968356879211683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x971937fb8168b7%3A0x1ccbbe38ab486f63!2sSmash%20do%20Cabo!5e0!3m2!1spt-BR!2sbr!4v1716842100059!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-contact">
+      Endereço: R. Damião Teixeira, 33, 69 - Praia dos Anjos, Arraial do Cabo - RJ<br>
+      WhatsApp: <a href="https://wa.me/5522991052197" style="color:#f97316;text-decoration:none;" target="_blank">(22) 99105-2197</a>
+      <br>Aberto todos os dias, 18h às 00h
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
+      <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+      <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
+    </div>
+    <div class="footer-credit">
+      © 2024 Smash do Cabo. Todos os direitos reservados.
+    </div>
+  </footer>
 </body>
 </html>
