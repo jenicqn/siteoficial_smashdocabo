@@ -1,1 +1,179 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smash do Cabo – Smash Burger Arraial do Cabo</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.5;
+    }
+    header {
+      background: #f97316;
+      color: #fff;
+      padding: 28px 0 16px 0;
+      text-align: center;
+    }
+    header img {
+      max-width: 130px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: #fff3e0;
+      padding: 8px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    nav a {
+      color: #f97316;
+      text-decoration: none;
+      margin: 0 16px;
+      font-weight: bold;
+      font-size: 1.06rem;
+      transition: color .2s;
+    }
+    nav a:hover { color: #c2410c; }
+    .container {
+      max-width: 900px;
+      margin: 32px auto 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+      padding: 28px 26px 20px 26px;
+      margin-bottom: 36px;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #f97316;
+      letter-spacing: 1px;
+    }
+    ul.cardapio {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 18px;
+    }
+    ul.cardapio li {
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f3e9e0;
+      padding-bottom: 10px;
+    }
+    .preco { float: right; color: #16a34a; font-weight: bold; }
+    .redes a {
+      margin-right: 14px;
+      color: #f97316;
+      text-decoration: none;
+      font-size: 1.4rem;
+      vertical-align: middle;
+      transition: color .2s;
+    }
+    .redes a:hover { color: #c2410c; }
+    .endereco, .contato {
+      margin-top: 10px;
+      font-size: 1.06rem;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 6px; }
+      header h1 { font-size: 1.3rem; }
+      .card { padding: 16px 9px; }
+      ul.cardapio li { font-size: .97rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="IMAGEM_DA_LOGO_DO_SMASH" alt="Smash do Cabo Logo">
+    <h1>Smash do Cabo</h1>
+    <div style="font-size: 1.1rem;">A Primeira Smash Burger de Arraial do Cabo</div>
+  </header>
+
+  <nav>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#horario">Horário</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#contato">Pedidos</a>
+  </nav>
+
+  <div class="container">
+    <div class="card" id="cardapio">
+      <h2>🍔 Cardápio</h2>
+      <ul class="cardapio">
+        <li>
+          Smash Clássico <span class="preco">R$ 18,90</span>
+          <br>
+          2 carnes smash, cheddar cremoso, cebola caramelizada, pão artesanal.
+        </li>
+        <li>
+          Smash Bacon <span class="preco">R$ 22,90</span>
+          <br>
+          2 carnes smash, cheddar, cebola caramelizada, bacon crocante, pão artesanal.
+        </li>
+        <li>
+          Big Smash <span class="preco">R$ 26,90</span>
+          <br>
+          3 carnes smash, cheddar, maionese verde artesanal, pão com gergelim.
+        </li>
+        <li>
+          Veggie Smash <span class="preco">R$ 19,90</span>
+          <br>
+          Hambúrguer de grão de bico, cheddar, maionese verde, cebola crispy, pão de batata.
+        </li>
+        <li>
+          Batata Smash <span class="preco">R$ 12,00</span>
+          <br>
+          Batata frita crocante, porção individual.
+        </li>
+        <!-- Adicione mais itens conforme o seu cardápio -->
+      </ul>
+    </div>
+
+    <div class="card" id="horario">
+      <h2>🕒 Horário de Funcionamento</h2>
+      <div>
+        Todos os dias a partir das <strong>17h45</strong> <br>
+        <small>(Consulte disponibilidade em feriados)</small>
+      </div>
+    </div>
+
+    <div class="card" id="localizacao">
+      <h2>📍 Localização</h2>
+      <div class="endereco">
+        Rua Damião Teixeira, 33 – Praia dos Anjos<br>
+        Arraial do Cabo – RJ
+      </div>
+    </div>
+
+    <div class="card" id="contato">
+      <h2>📱 Contato & Pedidos</h2>
+      <div class="contato">
+        WhatsApp: <a href="https://wa.me/5521999999999" target="_blank" style="color:#16a34a;font-weight:bold;">Clique aqui</a><br>
+        iFood: <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef" target="_blank">Peça aqui</a><br>
+        Instagram: <a href="https://www.instagram.com/smashdocabooficial/" target="_blank">@smashdocabooficial</a>
+      </div>
+      <div class="redes" style="margin-top:12px;">
+        <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram">📷</a>
+        <a href="https://www.facebook.com/smashdocabooficial/" target="_blank" title="Facebook">📘</a>
+      </div>
+    </div>
+  </div>
+  
+  <footer style="background:#f97316;color:#fff;text-align:center;padding:13px 0 9px 0;font-size:0.98rem;">
+    © 2025 Smash do Cabo. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
