@@ -30,11 +30,11 @@ header {
 .logo-header {
   display: flex;
   align-items: center;
-  height: 72px;
+  height: 90px;
 }
 .logo-header img {
-  height: 80px;
-  margin-right: 40px;
+  height: 100px;
+  margin-right: 60px;
   transition: all .16s;
 }
 
