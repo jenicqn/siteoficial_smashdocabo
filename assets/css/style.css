@@ -253,3 +253,110 @@ header {
   0% { box-shadow: 0 0 0 rgba(249,115,22,0.3); }
   100% { box-shadow: 0 0 16px rgba(249,115,22,0.5), 0 4px 22px rgba(249,115,22,0.4); }
 }
+
+.testimonials-section {
+  background: linear-gradient(110deg, #fffbe2 80%, #ffecd7 100%);
+  margin: 42px auto 0 auto;
+  padding: 24px 1vw 30px 1vw;
+  border-radius: 28px;
+  box-shadow: 0 6px 52px #f9731610;
+  max-width: 1100px;
+  text-align: center;
+}
+.testimonials-title {
+  color: #f97316;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0000000f;
+  padding: 20px 24px;
+  max-width: 330px;
+  min-width: 260px;
+  text-align: left;
+  font-size: 1.03rem;
+  position: relative;
+}
+.testimonial::before {
+  content: "“";
+  font-size: 2rem;
+  color: #f97316;
+  position: absolute;
+  top: 12px;
+  left: 18px;
+}
+.testimonial-stars {
+  color: #ffce39;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  display: block;
+}
+.testimonial-author {
+  color: #f97316;
+  font-weight: bold;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+footer {
+  background: #232323;
+  color: #fff;
+  padding: 40px 15px 22px 15px;
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+  margin-top: 56px;
+  box-shadow: 0 -8px 48px #23232321;
+}
+
+.footer-contact {
+  font-size: 1.14rem;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.footer-contact a {
+  color: #f97316;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin: 14px 0 7px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.footer-social a {
+  font-size: 2rem;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  transition: background 0.18s, transform 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social a:hover {
+  background: #f97316;
+  transform: scale(1.17);
+}
+
+.footer-credit {
+  color: #f97316;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 23px;
+}
+
