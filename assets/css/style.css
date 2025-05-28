@@ -1,3 +1,4 @@
+
 /* ======== BASE GERAL ======== */
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -252,8 +253,3 @@ header {
   0% { box-shadow: 0 0 0 rgba(249,115,22,0.3); }
   100% { box-shadow: 0 0 16px rgba(249,115,22,0.5), 0 4px 22px rgba(249,115,22,0.4); }
 }
-
-
-}
-
-/* Footer e outras seções continuam como estão (sem necessidade de alteração neste momento) */
