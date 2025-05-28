@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smash do Cabo</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smash do Cabo – O Melhor Smash de Arraial do Cabo</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <script>
+  if (window.location.hostname === "smashdocabo.com.br") {
+    window.location.replace("https://www.smashdocabo.com.br");
+  }
+</script>
 </head>
 <body>
-
-  <header>
+<header>
     <div class="logo-header">
       <img src="logo.png" alt="Logo Smash do Cabo">
     </div>
-    <nav class="nav-links">
+<nav class="nav-links">
       <a href="#cardapio">Cardápio</a>
       <a href="#localizacao">Localização</a>
       <a href="#contato">Contato</a>
@@ -24,59 +29,70 @@
       <a href="https://wa.me/5522991052197"><i class="ri-whatsapp-fill"></i></a>
     </div>
   </header>
-
-  <section class="main-hero">
+<section class="main-hero">
     <div class="main-hero-img">
-      <img src="hamburguer.jpg" alt="Smash Burger">
-    </div>
+<img src="fotodosite.jpg" alt="Smash Burger">
+  </div>
+ <span class="hero-divider"></span>
     <div class="main-hero-content">
       <h1>O melhor Smash você encontra aqui!</h1>
-      <p>Descubra o verdadeiro sabor do Smash Burger em Arraial do Cabo. Ingredientes frescos, carnes suculentas, muito sabor e aquele ponto perfeito. Peça agora e viva essa experiência!</p>
-      <a href="#cardapio" class="btn-cardapio">Peça já</a>
-    </div>
+ <p>
+        Descubra o verdadeiro sabor do Smash Burger em Arraial do Cabo.<br>
+        Ingredientes frescos, carnes suculentas, muito sabor e aquele ponto perfeito.<br>
+        Peça agora e viva essa experiência!
+      </p>
+      <a href="https://app.cardapioweb.com/smash_do_cabo#promocoes" class="btn-cardapio" target="_blank" style="background:#f97316;color:#fff;font-weight:bold;font-size:1.15rem;padding:12px 38px;border-radius:15px;text-decoration:none;box-shadow:0 2px 7px #f9731640;border:none;transition:background .17s, color .17s, transform .12s;cursor:pointer;margin-top:9px;display:inline-block;">Peça já</a>
+
+</div>
   </section>
 
   <section class="testimonials-section">
-    <h2 class="testimonials-title">O que nossos clientes dizem</h2>
-    <div class="testimonials-list">
+    <div class="testimonials-title">O que nossos clientes dizem</div>
+ <div class="testimonials-list">
       <div class="testimonial">
-        <p>⭐⭐⭐⭐⭐<br>Melhor smash da cidade! Atendimento rápido, lanche delicioso e preço justo. Recomendo muito!</p>
-        <span class="testimonial-author">— Ana Paula S.</span>
-      </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Melhor smash da cidade! Atendimento rápido, lanche delicioso e preço justo. Recomendo muito!</div>
+        <div class="testimonial-author">— Ana Paula S.</div>
+</div>
       <div class="testimonial">
-        <p>⭐⭐⭐⭐⭐<br>O sabor é incrível, o pão é super macio e a carne no ponto certo. Virei fã do Smash do Cabo!</p>
-        <span class="testimonial-author">— Carlos F.</span>
-      </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">O sabor é incrível, o pão é super macio e a carne no ponto certo. Virei fã do Smash do Cabo!</div>
+        <div class="testimonial-author">— Carlos F.</div>
+</div>
       <div class="testimonial">
-        <p>⭐⭐⭐⭐⭐<br>Experiência incrível! Já pedi várias vezes, sempre chega quentinho. Melhor hambúnguer de Arraial!</p>
-        <span class="testimonial-author">— Luciana R.</span>
-      </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Experiência incrível! Já pedi várias vezes, sempre chega quentinho. Melhor hambúrguer de Arraial!</div>
+        <div class="testimonial-author">— Luciana R.</div>
+ </div>
     </div>
   </section>
 
-  <section class="map-section" id="localizacao">
-    <h2 class="map-title">Onde estamos</h2>
-    <p class="map-subtitle">Clique abaixo para traçar sua rota até a melhor hamburgueria de Arraial!</p>
-    <a href="https://goo.gl/maps/abc123" target="_blank" class="btn-maps">Abrir no Google Maps</a>
-    <div class="map-responsive">
-      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+  <section class="map-section" id="ondeestamos">
+    <div class="map-title">Onde estamos</div>
+    <div class="map-subtitle">Clique abaixo para traçar sua rota até a melhor hamburgueria de Arraial!</div>
+    <a class="btn-maps" href="https://www.google.com/maps/dir//smash+do+cabo" target="_blank">Abrir no Google Maps</a>
+<div class="map-responsive">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.363650166314!2d-42.02462462567985!3d-22.968356879211683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x971937fb8168b7%3A0x1ccbbe38ab486f63!2sSmash%20do%20Cabo!5e0!3m2!1spt-BR!2sbr!4v1716842100059!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
   </section>
 
-  <footer id="contato">
-    <p class="footer-contact">
-      Endereço: R. Damião Teixeira, 33 - Praia dos Anjos, Arraial do Cabo - RJ<br>
-      WhatsApp: <a href="https://wa.me/5522991052197">(22) 99105-2197</a><br>
-      Aberto todos os dias, 18h às 23h
-    </p>
-    <div class="footer-social social-icons">
-      <a href="#"><i class="ri-facebook-fill"></i></a>
-      <a href="#"><i class="ri-instagram-fill"></i></a>
-      <a href="https://wa.me/5522991052197"><i class="ri-whatsapp-fill"></i></a>
+  <footer>
+    <div class="footer-contact">
+Endereço: R. Damião Teixeira, 33 - Praia dos Anjos, Arraial do Cabo - RJ<br>
+      WhatsApp: <a href="https://wa.me/5522991052197" target="_blank">(22) 99105-2197</a>
+      <br>Aberto todos os dias, 18h às 23h
     </div>
-    <p class="footer-credit">&copy; 2024 Smash do Cabo. Todos os direitos reservados.</p>
-  </footer>
-
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="ri-facebook-fill"></i></a>
+      <a href="https://www.instagram.com/smashdocabooficial/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
+      <a href="https://wa.me/5522991052197" target="_blank" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+      <a href="https://www.ifood.com.br/delivery/arraial-do-cabo-rj/smash-do-cabo-hamburgueria-centro/c0782244-54ba-4c58-b712-4912719670ef?srsltid=AfmBOor0cz4urGgAYW9x3LjLS_VmqJ6uvTC_piEDzNTRi7_0H8IUE6NZ" target="_blank" title="iFood"><i class="ri-restaurant-2-line"></i></a>
+    </div>
+    <div class="footer-credit">
+      © 2024 Smash do Cabo. Todos os direitos reservados.
+</div>
 </body>
 </html>
