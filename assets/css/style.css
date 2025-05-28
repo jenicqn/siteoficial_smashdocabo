@@ -34,9 +34,9 @@ header {
   flex: 0 0 auto;
 }
 .logo-header img {
-  height: 64px;
-  margin-right: 22px;
-  transition: all .16s;
+  height: 150px;
+  margin-right: 60px;
+  transition: all .30s;
 }
 
 /* MENU CENTRALIZADO ABSOLUTO */
