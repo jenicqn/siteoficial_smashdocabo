@@ -34,7 +34,7 @@ header {
   flex: 0 0 auto;
 }
 .logo-header img {
-  height: 150px;
+  height: 130px;
   margin-right: 60px;
   transition: all .30s;
 }
@@ -375,7 +375,7 @@ footer {
     gap: 10px;
   }
   .logo-header img {
-    height: 44px;
+    height: 70px;
     margin-right: 0;
     margin-bottom: 4px;
   }
