@@ -375,7 +375,8 @@ footer {
     gap: 10px;
   }
   .logo-header img {
-    height: 70px;
+    height: 100px;
+    max-width: 120vw;
     margin-right: 0;
     margin-bottom: 4px;
   }
