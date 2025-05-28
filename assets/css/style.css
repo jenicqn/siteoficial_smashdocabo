@@ -1,21 +1,4 @@
-body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  margin: 0;
-  background: #fff;
-  color: #232323;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ======= HEADER & MENU ======= */
+/* ==== HEADER E MENU DESKTOP ==== */
 header {
   background: #f97316;
   display: flex;
@@ -37,123 +20,80 @@ header {
   transition: all .16s;
 }
 
+/* MENU E ÍCONES EM LINHA */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 34px; /* Espaço entre nav e ícones */
+}
+
+/* MENU DE LINKS */
 .nav-links {
   display: flex;
-  gap: 32px; /* Aumentado para dar mais espaçamento */
+  gap: 28px;
   align-items: center;
 }
 
-.nav-links a:last-child {
-  margin-right: 18px; /* Garante espaço entre último link e ícones, ajuste se necessário */
+.nav-links a {
+  font-size: 1.12em;
 }
 
+/* ÍCONES SOCIAIS */
 .nav-social {
   display: flex;
   gap: 18px;
   align-items: center;
+  margin-left: 22px; /* Espaço do menu pros ícones */
 }
 
-.nav-social a,
-.nav-social i {
-  margin-left: 0;
+.nav-social a, .nav-social i {
   font-size: 1.35rem;
 }
 
-/* ======= AVALIAÇÕES ======= */
-.avaliacoes {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  margin: 30px 0 0 0;
-}
-.avaliacao {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 14px #0001;
-  padding: 18px 22px;
-  min-width: 180px;
-  max-width: 220px;
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.avaliacao .nome {
-  font-weight: 700;
-  margin-top: 8px;
-}
-.avaliacao .comentario {
-  margin-top: 5px;
-  font-size: 1em;
-  color: #444;
-}
-
-@media (max-width: 700px) {
-  /* Header Responsivo */
+/* ==== HEADER RESPONSIVO (MOBILE) ==== */
+@media (max-width: 800px) {
   header {
     flex-direction: column;
     align-items: stretch;
-    padding: 10px 8px 12px 8px;
+    padding: 10px 6px 12px 6px;
   }
   .logo-header {
     width: 100%;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .logo-header img {
     height: 44px;
     margin-right: 0;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
+  }
+  .menu-container {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    align-items: center;
   }
   .nav-links {
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 13px;
-    font-size: 1em;
+    justify-content: center;
     width: 100%;
+    gap: 13px;
     padding: 0;
   }
   .nav-social {
     justify-content: center;
-    gap: 11px;
-    margin-top: 7px;
+    margin: 9px 0 0 0;
+    gap: 13px;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .nav-links {
-    font-size: 0.93em;
-    gap: 9px;
+    font-size: 0.98em;
+    gap: 8px;
   }
   .nav-social {
     gap: 7px;
   }
-}
-
-/* Avaliações SEMPRE lado a lado — rolagem horizontal no mobile */
-@media (max-width: 900px) {
-  .avaliacoes {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: #f97316 #fff;
-  }
-  .avaliacao {
-    min-width: 200px;
-    max-width: 220px;
-    flex: 0 0 auto;
-  }
-}
-
-/* Esconde barra feia do scroll no Chrome/Safari */
-.avaliacoes::-webkit-scrollbar {
-  height: 6px;
-  background: #fff;
-}
-.avaliacoes::-webkit-scrollbar-thumb {
-  background: #f97316;
-  border-radius: 4px;
 }
