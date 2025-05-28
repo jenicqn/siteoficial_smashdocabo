@@ -1,4 +1,3 @@
-
 /* ======== BASE GERAL ======== */
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -174,86 +173,7 @@ header {
   transform: scale(1.07);
 }
 
-/* ======= MAPA ======= */
-.map-section {
-  background: linear-gradient(110deg, #fffbe2 80%, #ffecd7 100%);
-  margin: 42px auto 0 auto;
-  padding: 26px 2vw 22px 2vw;
-  border-radius: 28px;
-  box-shadow: 0 6px 52px #f9731610;
-  max-width: 1100px;
-  text-align: center;
-}
-
-.map-title {
-  color: #f97316;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-.map-subtitle {
-  color: #e78822;
-  font-size: 1.17rem;
-  margin-bottom: 19px;
-  margin-top: 8px;
-}
-.btn-maps {
-  background: #f97316;
-  color: #fff;
-  border: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 12px 38px;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px #f973163a;
-  cursor: pointer;
-  margin: 20px 0 28px 0;
-  transition: background 0.18s, transform 0.18s;
-}
-.btn-maps:hover, .btn-maps:active {
-  background: #ea6708;
-  transform: scale(1.05);
-}
-.map-responsive {
-  width: 100%;
-  min-width: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 0 auto 10px auto;
-  box-shadow: 0 2px 12px #f9731609;
-}
-
-/* ======= BOTÃO FLUTUANTE MOBILE ======= */
-.btn-flutuante {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  .btn-flutuante {
-    position: fixed;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-    z-index: 9999;
-    background: #f97316;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.15rem;
-    padding: 14px 38px;
-    border-radius: 50px;
-    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
-    animation: pulse 1.4s infinite alternate;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: .01em;
-  }
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 rgba(249,115,22,0.3); }
-  100% { box-shadow: 0 0 16px rgba(249,115,22,0.5), 0 4px 22px rgba(249,115,22,0.4); }
-}
-
+/* ======= DEPOIMENTOS ======= */
 .testimonials-section {
   background: linear-gradient(110deg, #fffbe2 80%, #ffecd7 100%);
   margin: 42px auto 0 auto;
@@ -307,6 +227,59 @@ header {
   display: inline-block;
 }
 
+/* ======= MAPA ======= */
+.map-section {
+  background: linear-gradient(110deg, #fffbe2 80%, #ffecd7 100%);
+  margin: 42px auto 0 auto;
+  padding: 26px 2vw 22px 2vw;
+  border-radius: 28px;
+  box-shadow: 0 6px 52px #f9731610;
+  max-width: 1100px;
+  text-align: center;
+}
+.map-title {
+  color: #f97316;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.map-subtitle {
+  color: #e78822;
+  font-size: 1.17rem;
+  margin-bottom: 19px;
+  margin-top: 8px;
+}
+.btn-maps {
+  background: #f97316;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 38px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px #f973163a;
+  cursor: pointer;
+  margin: 20px 0 28px 0;
+  transition: background 0.18s, transform 0.18s;
+}
+.btn-maps:hover, .btn-maps:active {
+  background: #ea6708;
+  transform: scale(1.05);
+}
+.map-responsive {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto 10px auto;
+  box-shadow: 0 2px 12px #f9731609;
+}
+.map-responsive iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* ======= FOOTER ======= */
 footer {
   background: #232323;
   color: #fff;
@@ -316,19 +289,16 @@ footer {
   margin-top: 56px;
   box-shadow: 0 -8px 48px #23232321;
 }
-
 .footer-contact {
   font-size: 1.14rem;
   margin-bottom: 16px;
   line-height: 1.4;
 }
-
 .footer-contact a {
   color: #f97316;
   font-weight: bold;
   text-decoration: underline;
 }
-
 .footer-social {
   margin: 14px 0 7px 0;
   display: flex;
@@ -336,7 +306,6 @@ footer {
   justify-content: center;
   gap: 14px;
 }
-
 .footer-social a {
   font-size: 2rem;
   padding: 12px;
@@ -352,7 +321,6 @@ footer {
   background: #f97316;
   transform: scale(1.17);
 }
-
 .footer-credit {
   color: #f97316;
   font-weight: bold;
@@ -360,3 +328,60 @@ footer {
   margin-top: 23px;
 }
 
+/* ======= BOTÃO FLUTUANTE MOBILE ======= */
+.btn-flutuante {
+  display: none;
+}
+@media (max-width: 800px) {
+  .btn-flutuante {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: #f97316;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 14px 38px;
+    border-radius: 50px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.4s infinite alternate;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .01em;
+  }
+}
+
+/* ======= ANIMAÇÃO ======= */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(249,115,22,0.3); }
+  100% { box-shadow: 0 0 16px rgba(249,115,22,0.5), 0 4px 22px rgba(249,115,22,0.4); }
+}
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 768px) {
+  .main-hero {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .main-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    max-width: 94vw;
+    min-width: auto;
+  }
+
+  .map-responsive iframe {
+    height: 300px;
+  }
+}
