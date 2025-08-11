@@ -40,17 +40,6 @@ header {
 }
 
 /* MENU CENTRALIZADO ABSOLUTO */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  background: none;
-}
 .nav-links a {
   font-size: 1.13em;
   display: flex;
@@ -60,7 +49,19 @@ header {
   color: #fff;
   text-decoration: none;
   background: none;
+
+  /* Moldura */
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
 .nav-icon {
   font-size: 1.15em;
   color: #fff;
