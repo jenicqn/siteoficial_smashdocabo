@@ -40,27 +40,30 @@ header {
 }
 
 /* MENU CENTRALIZADO ABSOLUTO */
-.nav-links a {
-  font-size: 1.13em;
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  background: none;
+  gap: 12px; /* Espaço entre os botões */
+}
 
-  /* Moldura */
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
   border: 2px solid #fff;
   border-radius: 8px;
-  padding: 8px 14px;
-  transition: background 0.2s ease, transform 0.1s ease;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, transform .1s ease;
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
+  background: rgba(255,255,255,.15);
+  transform: scale(1.04);
 }
+
 
 .nav-icon {
   font-size: 1.15em;
